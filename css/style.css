@@ -419,6 +419,10 @@ footer::before {
   background-color: #ff8fd8;
 }
 
+.success-form .submit-btn {
+  cursor: not-allowed;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;

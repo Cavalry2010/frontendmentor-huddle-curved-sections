@@ -2,6 +2,7 @@
 
 class Huddle {
   form = document.querySelector(".footer-form");
+  submitBtn = document.querySelector(".submit-btn");
 
   constructor() {
     this.form.setAttribute("novalidate", "novalidate");
@@ -15,6 +16,9 @@ class Huddle {
       this.showError("Check your email please");
     } else {
       this.showSucess("Thank you!");
+      input.value = "";
+      this.submitBtn.setAttribute("disabled", "disabled");
+      input.setAttribute("disabled", "disabled");
     }
   }
 
@@ -37,7 +41,6 @@ class Huddle {
       function () {
         formMessage.textContent = message;
         this.form.classList.add("success-form");
-        this.form.setAttribute("disabled", "disabled");
       }.bind(this),
       delay
     );
